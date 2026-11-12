@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cémantix Jeu : Règles, Températures et Astuces (novembre 2026)</title>
+<meta name="description" content="Tout sur le Cémantix jeu : trouver le mot du jour par le sens, comprendre la température en °C et la progression en ‰, stratégies, thermomètre de partie et générateur de mots de départ.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Cémantix Jeu – Guide, thermomètre de partie et mots de départ">
+<meta property="og:description" content="Comprenez la température et la progression du Cémantix, suivez vos essais et choisissez de meilleurs premiers mots.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Qu'est-ce que le Cémantix ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Le Cémantix est un jeu de mots quotidien en français. Il faut trouver un mot secret en proposant des mots proches par le sens. Chaque essai reçoit une température en °C, et les mots les plus proches une progression sur 1 000."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Comment fonctionne la température au Cémantix ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "La température mesure la proximité de sens entre votre mot et le mot secret. Un mot sans rapport est proche de 0 °C ou négatif, un mot du même thème monte souvent vers 30 à 40 °C ou plus, et le mot exact vaut 100 °C."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Que signifie la progression en ‰ ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "La progression apparaît quand votre mot fait partie des 1 000 mots les plus proches du mot secret. 1 000 ‰ correspond au mot secret et 999 ‰ au mot le plus proche après lui."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Combien d'essais a-t-on au Cémantix ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Le nombre d'essais est illimité. L'objectif est de trouver le mot secret en un minimum de propositions."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "L'orthographe compte-t-elle au Cémantix ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Non. Seul le sens compte : deux mots qui s'écrivent presque pareil peuvent être très éloignés pour le jeu. Il faut toutefois écrire des mots existants, sans faute de frappe."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quel est le meilleur premier mot au Cémantix ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Il n'existe pas de mot parfait, car le mot secret change chaque jour. La meilleure stratégie est de proposer plusieurs mots courants de thèmes très différents, comme un lieu, un objet, une émotion et une action."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "À quelle heure change le mot du Cémantix ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Le mot secret du Cémantix change chaque jour à minuit et il est le même pour tous les joueurs."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Le thermomètre de cette page calcule-t-il les températures ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Non. Le thermomètre ne contient pas le modèle du jeu : vous y saisissez les températures et progressions affichées par le Cémantix, et il les trie, trace votre courbe et propose des conseils."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<div class="notice">Guide de fans non officiel · aucun lien avec le site Cémantix officiel, SUTOM, Tusmo ou Motus</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a href="#" class="brand">
+      <span class="thermo" aria-hidden="true"><i></i></span>
+      <span class="b-txt">Cémantix</span>
+    </a>
+    <button class="hamb" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#thermo">Thermomètre</a>
+      <a href="#depart">Mots de départ</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="h-copy">
+      <p class="kick">Guide · <span class="cm">novembre 2026</span></p>
+      <h1>Cémantix jeu : trouvez le mot par le <em>sens</em></h1>
+      <p class="lead">Au Cémantix, l'orthographe ne compte pas : seule la <b>proximité de sens</b> vous rapproche du mot secret. Chaque essai reçoit une température en °C, et les mots les plus proches une progression sur 1 000. Ce guide explique comment lire ces chiffres, propose un thermomètre pour suivre votre partie et un générateur de mots de départ. Envie aussi d'un jeu de lettres ? Jouez à <a href="https://sutomjeu.com/">Sutom Jeu</a>.</p>
+      <div class="h-cta"><a href="#thermo" class="btn">Suivre ma partie</a><a href="https://sutomjeu.com/cemantix/" class="btn ghost">Jouer au Cémantix du jour</a></div>
+    </div>
+    <div class="scale" aria-label="Échelle des températures">
+      <p class="sc-h">L'échelle du Cémantix</p>
+      <ul>
+        <li class="t6"><span>🥳</span><b>Trouvé</b><em>100 °C · 1000 ‰</em></li>
+        <li class="t5"><span>🔥</span><b>Top 10</b><em>990–999 ‰</em></li>
+        <li class="t4"><span>🥵</span><b>Top 100</b><em>900–989 ‰</em></li>
+        <li class="t3"><span>😎</span><b>Top 1 000</b><em>1–899 ‰</em></li>
+        <li class="t2"><span>😐</span><b>Tiède</b><em>lien lointain</em></li>
+        <li class="t1"><span>🥶</span><b>Froid</b><em>peu de lien</em></li>
+        <li class="t0"><span>🧊</span><b>Glacé</b><em>sous 0 °C</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="thermo">
+  <div class="wrap">
+    <div class="sec-h"><h2>Thermomètre de partie Cémantix</h2><p>Vous jouez au Cémantix dans un autre onglet ? Notez ici chaque mot avec sa température (et sa progression ‰ si elle s'affiche). Le thermomètre trie vos essais, trace votre courbe et vous dit quoi tenter ensuite. Rien n'est envoyé : tout reste dans votre navigateur.</p></div>
+    <div class="th">
+      <form class="th-in" id="thForm" autocomplete="off">
+        <label class="f-w"><span>Mot proposé</span><input type="text" id="tW" maxlength="30" placeholder="ex. océan" required></label>
+        <label><span>Température °C</span><input type="number" id="tT" step="0.01" min="-100" max="100" placeholder="ex. 23,5" required inputmode="decimal"></label>
+        <label><span>Progression ‰ <small>(si affichée)</small></span><input type="number" id="tP" min="1" max="1000" placeholder="ex. 640"></label>
+        <button type="submit" class="btn">Ajouter</button>
+      </form>
+      <div class="th-bar">
+        <p id="thCount"></p>
+        <div><button type="button" id="thDemo" class="lnk">Charger un exemple</button><button type="button" id="thClear" class="lnk">Tout effacer</button></div>
+      </div>
+      <div class="th-grid">
+        <div class="th-list" id="thList"></div>
+        <div class="th-side">
+          <div class="best" id="thBest"></div>
+          <svg class="chart" id="thChart" viewBox="0 0 320 150" role="img" aria-label="Courbe des températures"></svg>
+          <div class="advice" id="thAdv"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="depart">
+  <div class="wrap">
+    <div class="sec-h"><h2>Générateur de mots de départ</h2><p>Les meilleurs premiers essais couvrent des thèmes très différents : vous repérez ainsi plus vite la « zone » du mot secret. Tirez six mots de six univers différents et proposez-les au début de votre partie.</p></div>
+    <div class="gen">
+      <div class="gen-cards" id="genCards"></div>
+      <div class="gen-ctl">
+        <button type="button" class="btn" id="genGo">🎲 Tirer 6 nouveaux mots</button>
+        <button type="button" class="btn ghost dark" id="genCopy">Copier la liste</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guide">
+  <div class="wrap g-in">
+    <article class="prose">
+      <h2>Le Cémantix jeu, comment ça marche ?</h2>
+      <p><b>Cémantix</b> est un jeu de mots quotidien très différent de Sutom, Tusmo ou Motus. Ici, pas de cases ni de lettres colorées : il faut deviner un mot secret en proposant des mots dont le <b>sens</b> est proche. Le jeu s'appuie sur un modèle de langue entraîné sur un grand nombre de textes en français. Ce modèle a appris quels mots apparaissent dans des contextes semblables, et c'est cette proximité qu'il mesure à chaque essai.</p>
+      <p>Le mot secret change chaque jour à minuit et il est le même pour tous les joueurs. Le nombre d'essais est illimité : le but est de le trouver avec le moins de propositions possible.</p>
+
+      <h3>Température et progression : lire les chiffres</h3>
+      <p>Chaque mot proposé reçoit une <b>température en °C</b>. Un mot sans rapport tourne autour de 0 °C, voire en dessous. Un mot du même thème monte souvent entre 30 et 40 °C ou plus. Le mot exact vaut 100 °C.</p>
+      <p>Quand votre mot fait partie des <b>1 000 mots les plus proches</b> du mot secret, une <b>progression en ‰</b> apparaît. Plus elle est haute, plus vous êtes près du but : 999 ‰ est le mot le plus proche, 1 000 ‰ est le mot secret lui-même. La progression est souvent plus parlante que la température, car elle donne votre rang exact.</p>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Emoji</th><th>Signification</th><th>Que faire ?</th></tr></thead>
+          <tbody>
+            <tr><td>🧊 🥶</td><td>Froid, peu ou pas de lien</td><td>Changez complètement de thème</td></tr>
+            <tr><td>😐</td><td>Tiède, lien lointain</td><td>Explorez autour, en élargissant</td></tr>
+            <tr><td>😎</td><td>Dans le top 1 000</td><td>Restez dans ce champ lexical</td></tr>
+            <tr><td>🥵</td><td>Dans le top 100</td><td>Cherchez synonymes et mots associés</td></tr>
+            <tr><td>🔥</td><td>Dans le top 10</td><td>Le mot est tout proche</td></tr>
+            <tr><td>🥳</td><td>Trouvé</td><td>Partagez votre score !</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Comment jouer au Cémantix, étape par étape</h3>
+      <ol>
+        <li>Proposez des mots variés : objets, actions, émotions, lieux, notions abstraites.</li>
+        <li>Repérez le mot le plus chaud de votre liste : c'est votre point de départ.</li>
+        <li>Essayez des mots du même univers que ce mot chaud.</li>
+        <li>Dès qu'une progression en ‰ apparaît, resserrez vos essais autour de ce sens.</li>
+        <li>Au-dessus de 900 ‰, testez synonymes, contraires, verbes et adjectifs de la même famille.</li>
+      </ol>
+      <p>Bloqué ? Le bouton <b>Indice</b> du jeu ajoute à votre liste un mot du top 1 000. Et si vous voulez abandonner, le drapeau révèle la réponse.</p>
+
+      <h3>Exemple de partie</h3>
+      <p>Voici une partie <i>illustrative</i> pour comprendre la démarche. Les chiffres sont inventés pour l'exemple : ils ne viennent pas d'une vraie partie.</p>
+      <div class="tbl">
+        <table class="exT">
+          <thead><tr><th>#</th><th>Mot</th><th>°C</th><th>‰</th><th>Lecture</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>voiture</td><td>4,1</td><td></td><td>🥶 froid : on change de thème</td></tr>
+            <tr><td>2</td><td>musique</td><td>9,8</td><td></td><td>🥶 toujours froid</td></tr>
+            <tr><td>3</td><td>mer</td><td>27,3</td><td>412</td><td>😎 top 1 000 : piste marine</td></tr>
+            <tr><td>4</td><td>poisson</td><td>31,6</td><td>688</td><td>😎 on se rapproche</td></tr>
+            <tr><td>5</td><td>pêcheur</td><td>44,2</td><td>936</td><td>🥵 top 100 : le métier de la mer</td></tr>
+            <tr><td>6</td><td>filet</td><td>56,9</td><td>991</td><td>🔥 top 10 !</td></tr>
+            <tr><td>7</td><td>chalutier</td><td>100</td><td>1000</td><td>🥳 trouvé</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Le joueur passe d'un mot froid (voiture) à un thème tiède (mer), puis précise : animal marin, métier, outil, et enfin le bateau de pêche. C'est exactement la logique à suivre : <b>du large vers le précis</b>.</p>
+
+      <h3>8 astuces pour réussir le Cémantix plus vite</h3>
+      <ul>
+        <li><b>Commencez très large.</b> Six mots de six univers différents valent mieux que six mots proches.</li>
+        <li><b>Ne vous fiez pas à l'orthographe.</b> « Chat » et « château » n'ont rien à voir pour le jeu.</li>
+        <li><b>Variez les natures de mots.</b> Le mot secret peut être un nom, un verbe ou un adjectif.</li>
+        <li><b>Préférez le singulier</b> et les mots courants, plus souvent reconnus.</li>
+        <li><b>Suivez le mot le plus chaud</b>, pas le dernier essai : une mauvaise piste peut refroidir la liste.</li>
+        <li><b>Pensez en contextes.</b> Où trouve-t-on ce mot ? Qui l'utilise ? À quoi sert-il ?</li>
+        <li><b>Testez les contraires.</b> Pour le modèle, « chaud » et « froid » sont souvent proches, car ils apparaissent dans les mêmes phrases.</li>
+        <li><b>Notez vos essais</b> dans le thermomètre ci-dessus pour garder une vue claire de votre partie.</li>
+      </ul>
+
+      <h3>Pourquoi le Cémantix jeu est si addictif</h3>
+      <p>Le Cémantix jeu stimule une autre partie du cerveau que les jeux de lettres : il fait travailler les associations d'idées, le vocabulaire et la culture générale. Chaque partie raconte une petite enquête, avec ses fausses pistes et ses « eurêka ». Comme le mot est le même pour tout le monde, on compare volontiers son nombre d'essais avec ses amis ou ses collègues. Beaucoup de joueurs enchaînent d'ailleurs Cémantix et un jeu de lettres chaque matin.</p>
+
+      <h3>Cémantix et les jeux de lettres</h3>
+      <p>Si vous aimez varier les plaisirs, essayez aussi ces jeux de lettres en français, où l'orthographe compte cette fois :</p>
+      <div class="others">
+        <div class="o-card"><p class="o-t"><span class="sq r">M</span> Motus</p><p>Le <a href="https://sutomjeu.com/motus/">Motus en ligne</a> reprend l'esprit du jeu télévisé : la première lettre est donnée, six essais, des lettres rouges et des ronds jaunes. Le mot du jour fait 7 lettres et le mode libre va de 5 à 9 lettres.</p></div>
+        <div class="o-card"><p class="o-t"><span class="sq y">L</span> Le Mot</p><p><a href="https://sutomjeu.com/le-mot/">Le Mot</a> est le Wordle en français : un mot de 5 lettres à trouver en 6 essais, sans aucune lettre donnée au départ. Plus court, mais plus difficile au premier coup.</p></div>
+        <div class="o-card"><p class="o-t"><span class="sq b">S</span> Sutom</p><p>Le classique : un mot de 6 lettres, la première offerte, six essais. Idéal pour une partie rapide avant d'attaquer le Cémantix du jour.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap faq-in">
+    <h2>Questions fréquentes sur le Cémantix</h2>
+    <details open><summary>Qu&#x27;est-ce que le Cémantix ?</summary><p>Le Cémantix est un jeu de mots quotidien en français. Il faut trouver un mot secret en proposant des mots proches par le sens. Chaque essai reçoit une température en °C, et les mots les plus proches une progression sur 1 000.</p></details>
+    <details><summary>Comment fonctionne la température au Cémantix ?</summary><p>La température mesure la proximité de sens entre votre mot et le mot secret. Un mot sans rapport est proche de 0 °C ou négatif, un mot du même thème monte souvent vers 30 à 40 °C ou plus, et le mot exact vaut 100 °C.</p></details>
+    <details><summary>Que signifie la progression en ‰ ?</summary><p>La progression apparaît quand votre mot fait partie des 1 000 mots les plus proches du mot secret. 1 000 ‰ correspond au mot secret et 999 ‰ au mot le plus proche après lui.</p></details>
+    <details><summary>Combien d&#x27;essais a-t-on au Cémantix ?</summary><p>Le nombre d&#x27;essais est illimité. L&#x27;objectif est de trouver le mot secret en un minimum de propositions.</p></details>
+    <details><summary>L&#x27;orthographe compte-t-elle au Cémantix ?</summary><p>Non. Seul le sens compte : deux mots qui s&#x27;écrivent presque pareil peuvent être très éloignés pour le jeu. Il faut toutefois écrire des mots existants, sans faute de frappe.</p></details>
+    <details><summary>Quel est le meilleur premier mot au Cémantix ?</summary><p>Il n&#x27;existe pas de mot parfait, car le mot secret change chaque jour. La meilleure stratégie est de proposer plusieurs mots courants de thèmes très différents, comme un lieu, un objet, une émotion et une action.</p></details>
+    <details><summary>À quelle heure change le mot du Cémantix ?</summary><p>Le mot secret du Cémantix change chaque jour à minuit et il est le même pour tous les joueurs.</p></details>
+    <details><summary>Le thermomètre de cette page calcule-t-il les températures ?</summary><p>Non. Le thermomètre ne contient pas le modèle du jeu : vous y saisissez les températures et progressions affichées par le Cémantix, et il les trie, trace votre courbe et propose des conseils.</p></details>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="#" class="brand"><span class="thermo" aria-hidden="true"><i></i></span><span class="b-txt">Cémantix</span></a>
+    <p>Ce site est un guide indépendant créé par des fans. Il n'est ni affilié, ni approuvé par le site Cémantix officiel, SUTOM, Tusmo ou l'émission Motus. Les noms cités appartiennent à leurs propriétaires. Les outils de cette page n'utilisent pas le modèle du jeu : les températures sont celles que vous saisissez.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(function(){
+  var THEMES={"Nature": ["🌿", ["forêt", "montagne", "rivière", "fleur", "arbre", "désert", "volcan"]], "Corps et santé": ["🫀", ["cœur", "main", "médecin", "muscle", "sommeil", "douleur"]], "Émotions": ["💭", ["joie", "peur", "colère", "amour", "tristesse", "surprise"]], "Nourriture": ["🍽️", ["pain", "fromage", "cuisine", "fruit", "sucre", "repas"]], "Ville": ["🏙️", ["rue", "immeuble", "quartier", "magasin", "métro", "mairie"]], "Travail": ["💼", ["bureau", "salaire", "réunion", "métier", "patron", "usine"]], "Technologie": ["💻", ["ordinateur", "téléphone", "internet", "écran", "robot", "logiciel"]], "Temps": ["⏳", ["jour", "hiver", "siècle", "matin", "calendrier", "horloge"]], "Sport": ["⚽", ["ballon", "course", "équipe", "match", "stade", "victoire"]], "Arts": ["🎨", ["peinture", "musique", "théâtre", "livre", "danse", "cinéma"]], "Transport": ["🚆", ["voiture", "train", "avion", "bateau", "vélo", "route"]], "Animaux": ["🐾", ["chien", "oiseau", "cheval", "poisson", "insecte", "loup"]], "Maison": ["🏠", ["cuisine", "lit", "fenêtre", "jardin", "porte", "meuble"]], "Société": ["⚖️", ["loi", "guerre", "élection", "argent", "école", "justice"]], "Sciences": ["🔬", ["atome", "planète", "énergie", "cellule", "calcul", "expérience"]], "Vêtements": ["👕", ["chemise", "chaussure", "chapeau", "manteau", "tissu", "mode"]]};
+  var $=function(id){return document.getElementById(id);};
+  var tt; function toast(m){ var e=$('toast'); e.textContent=m; e.hidden=false; clearTimeout(tt); tt=setTimeout(function(){e.hidden=true;},1900); }
+  function store(k,v){ try{ if(v===undefined) return JSON.parse(localStorage.getItem(k)); localStorage.setItem(k,JSON.stringify(v)); }catch(e){ return null; } }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function fr(n){ return n.toLocaleString('fr-FR',{maximumFractionDigits:2}); }
+  try{ var lab=new Date().toLocaleDateString('fr-FR',{month:'long',year:'numeric'});
+    document.querySelectorAll('.cm').forEach(function(e){ e.textContent=lab; });
+    document.title=document.title.replace(/\([^)]*\d{4}\)/,'('+lab+')'); }catch(e){}
+  function copy(txt,msg){
+    var ok=false; function fb(){ var ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');}catch(e){} ta.remove(); toast(msg); }
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){ ok=true; toast(msg); },function(){ if(!ok){ ok=true; fb(); } }); setTimeout(function(){ if(!ok){ ok=true; fb(); } },700); } else fb();
+  }
+
+  /* ---------- thermometer ---------- */
+  var d=new Date(), dayKey=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+  var saved=store('cem-thermo'), G=(saved&&saved.key===dayKey)?saved.g:[];
+  function tier(x){
+    if(x.p>=1000||x.t>=100) return ['🥳','t6','Trouvé'];
+    if(x.p>=990) return ['🔥','t5','Top 10'];
+    if(x.p>=900) return ['🥵','t4','Top 100'];
+    if(x.p>=1) return ['😎','t3','Top 1 000'];
+    if(x.t<0) return ['🧊','t0','Glacé'];
+    if(x.t<20) return ['🥶','t1','Froid'];
+    return ['😐','t2','Tiède'];
+  }
+  function rank(x){ return (x.p||0)*1000+x.t; }
+  function save(){ store('cem-thermo',{key:dayKey,g:G}); }
+  function render(){
+    $('thCount').innerHTML='<b>'+G.length+'</b> essai'+(G.length>1?'s':'')+' noté'+(G.length>1?'s':'');
+    if(!G.length){
+      $('thList').innerHTML='<p class="empty">Ajoutez votre premier mot pour démarrer le thermomètre.</p>';
+      $('thBest').innerHTML='<p class="b-l">Mot le plus chaud</p><p class="b-w">—</p>'; $('thChart').innerHTML=''; $('thAdv').innerHTML=''; return;
+    }
+    var S=G.slice().sort(function(a,b){return rank(b)-rank(a);});
+    $('thList').innerHTML='<ol>'+S.map(function(x){ var t=tier(x), w=Math.max(2,Math.min(100,x.p?60+x.p/1000*40:Math.max(0,x.t)/40*60)); return '<li class="'+t[1]+'"><span class="n">'+x.n+'</span><span class="w">'+esc(x.w)+'</span><span class="e" title="'+t[2]+'">'+t[0]+'</span><span class="t">'+fr(x.t)+' °C</span><span class="p">'+(x.p?x.p+' ‰':'')+'</span><span class="bar"><i style="width:'+w+'%"></i></span><button type="button" data-n="'+x.n+'" aria-label="Supprimer '+esc(x.w)+'">×</button></li>'; }).join('')+'</ol>';
+    $('thList').querySelectorAll('button').forEach(function(b){ b.addEventListener('click',function(){ G=G.filter(function(x){return x.n!==+b.dataset.n;}); G.forEach(function(x,i){x.n=i+1;}); save(); render(); }); });
+    var b=S[0], bt=tier(b);
+    $('thBest').innerHTML='<p class="b-l">Mot le plus chaud</p><p class="b-w '+bt[1]+'">'+bt[0]+' '+esc(b.w)+'</p><p class="b-s">'+fr(b.t)+' °C'+(b.p?' · '+b.p+' ‰':'')+' · essai n° '+b.n+'</p>';
+    // chart
+    var W=320,H=150,P=24, mn=Math.min(-5,Math.min.apply(null,G.map(function(x){return x.t;}))), mx=Math.max(50,Math.max.apply(null,G.map(function(x){return x.t;})));
+    var X=function(i){ return P+(G.length<2?(W-2*P)/2:i*(W-2*P)/(G.length-1)); }, Y=function(t){ return H-P-(t-mn)/(mx-mn)*(H-2*P); };
+    var best=[], cur=-1e9; G.forEach(function(x){ cur=Math.max(cur,x.t); best.push(cur); });
+    var svg='<line x1="'+P+'" y1="'+Y(0)+'" x2="'+(W-P)+'" y2="'+Y(0)+'" class="zero"/><text x="2" y="'+(Y(0)+4)+'">0°</text><text x="2" y="'+(Y(mx)+4)+'">'+Math.round(mx)+'°</text>';
+    svg+='<polyline class="bestl" points="'+best.map(function(t,i){return X(i)+','+Y(t);}).join(' ')+'"/>';
+    svg+='<polyline class="line" points="'+G.map(function(x,i){return X(i)+','+Y(x.t);}).join(' ')+'"/>';
+    svg+=G.map(function(x,i){ return '<circle cx="'+X(i)+'" cy="'+Y(x.t)+'" r="4" class="'+tier(x)[1]+'"><title>'+esc(x.w)+' : '+fr(x.t)+' °C</title></circle>'; }).join('');
+    $('thChart').innerHTML=svg;
+    // advice
+    var last5=G.slice(-5), coldRun=last5.length>=5&&last5.every(function(x){return !x.p&&x.t<b.t-10;});
+    var adv;
+    if(bt[1]==='t6') adv='🥳 Bravo, mot trouvé en <b>'+b.n+'</b> essai'+(b.n>1?'s':'')+' ! Partagez votre score et revenez demain.';
+    else if(bt[1]==='t5') adv='🔥 Vous êtes dans le top 10. Testez les synonymes directs, le verbe ou l\'adjectif de la même famille que <b>'+esc(b.w)+'</b>, et ses formes au singulier.';
+    else if(bt[1]==='t4') adv='🥵 Top 100 : vous êtes dans le bon champ lexical. Cherchez des mots plus précis autour de <b>'+esc(b.w)+'</b> : objets, métiers, actions ou lieux qui lui sont liés.';
+    else if(bt[1]==='t3') adv='😎 Vous êtes dans le top 1 000. Explorez l\'univers de <b>'+esc(b.w)+'</b> : à quoi sert-il, où le trouve-t-on, qui l\'utilise ?';
+    else if(bt[1]==='t2') adv='😐 Une piste tiède avec <b>'+esc(b.w)+'</b>. Essayez quelques mots de son thème, mais gardez un ou deux essais pour d\'autres univers.';
+    else adv='🥶 Tout est encore froid. Changez complètement de thème : utilisez le générateur de mots de départ juste en dessous.';
+    if(coldRun&&bt[1]!=='t6') adv+='<br><br>⚠️ Vos 5 derniers essais sont nettement plus froids que votre meilleur mot. Revenez à <b>'+esc(b.w)+'</b> comme point de départ.';
+    $('thAdv').innerHTML='<p>'+adv+'</p>';
+  }
+  $('thForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var w=$('tW').value.trim().toLowerCase(), t=parseFloat(String($('tT').value).replace(',','.')), p=parseInt($('tP').value,10);
+    if(!w){ toast('Entrez un mot'); return; }
+    if(isNaN(t)||t<-100||t>100){ toast('Température entre -100 et 100 °C'); return; }
+    if(G.some(function(x){return x.w===w;})){ toast('« '+w+' » est déjà dans la liste'); return; }
+    G.push({n:G.length+1,w:w,t:t,p:(p>=1&&p<=1000)?p:0}); save(); render();
+    $('tW').value=''; $('tT').value=''; $('tP').value=''; $('tW').focus();
+  });
+  $('thClear').addEventListener('click',function(){ if(!G.length) return; G=[]; save(); render(); toast('Liste effacée'); });
+  $('thDemo').addEventListener('click',function(){
+    G=[['voiture',4.1,0],['musique',9.8,0],['mer',27.3,412],['poisson',31.6,688],['pêcheur',44.2,936],['filet',56.9,991]].map(function(a,i){return {n:i+1,w:a[0],t:a[1],p:a[2]};});
+    save(); render(); toast('Exemple chargé (chiffres fictifs)');
+  });
+
+  /* ---------- generator ---------- */
+  var drawn=[];
+  function gen(){
+    var keys=Object.keys(THEMES).sort(function(){return Math.random()-.5;}).slice(0,6);
+    drawn=keys.map(function(k){ var L=THEMES[k]; return [k,L[0],L[1][Math.floor(Math.random()*L[1].length)]]; });
+    $('genCards').innerHTML=drawn.map(function(x){ return '<div class="gc"><span class="gc-i" aria-hidden="true">'+x[1]+'</span><span class="gc-t">'+x[0]+'</span><b>'+x[2]+'</b></div>'; }).join('');
+  }
+  $('genGo').addEventListener('click',gen);
+  $('genCopy').addEventListener('click',function(){ copy(drawn.map(function(x){return x[2];}).join(', '),'Mots copiés !'); });
+
+  var hb=document.querySelector('.hamb'), nav=document.querySelector('.nav');
+  hb.addEventListener('click',function(){ var o=nav.classList.toggle('open'); hb.setAttribute('aria-expanded',o); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ nav.classList.remove('open'); hb.setAttribute('aria-expanded','false'); }); });
+
+  render(); gen();
+})();
+</script>
+</body>
+</html>
